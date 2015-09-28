@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 0bc155174b6ac0345a63d4497c97e161
+timeCreated: 1440762416
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bg_enemies01_0
+    21300002: Bg_enemies01_1
+    21300004: Bg_enemies01_2
+    21300006: Bg_enemies01_3
+    21300008: Bg_enemies01_4
+    21300010: Bg_enemies01_5
+    21300012: Bg_enemies01_6
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bg_enemies01_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1341
+        width: 241
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_1
+      rect:
+        serializedVersion: 2
+        x: 1183
+        y: 1305
+        width: 206
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_2
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 1624
+        width: 261
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1312
+        width: 241
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_4
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 1292
+        width: 256
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 450
+        width: 1735
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bg_enemies01_6
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 51
+        width: 1606
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
