@@ -8,15 +8,18 @@ public class PlayerData : MonoBehaviour {
 	public float currentTime;
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		StopTime ();
 		currentTime -= Time.deltaTime;
-		if (currentTime == 0 && currentTime < 0) {
+	}
 
+	void StopTime () {
+		if (currentTime < 0){
 			isTimeOut = true;
+			Time.timeScale = 0;
 		}
 	}
 }

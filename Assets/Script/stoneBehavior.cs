@@ -39,7 +39,6 @@ public class stoneBehavior : MonoBehaviour {
 		if (collid.gameObject.tag == "Player") {
 			DataCenter.instance.playerDataObject.currentTime -= DataCenter.instance.playerDataObject.damage;
 			StoneTouched = false;
-			Debug.Log ("why wont you work ;_;");
 		}
 		
 	}
