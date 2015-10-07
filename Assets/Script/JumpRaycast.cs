@@ -4,7 +4,8 @@ using System.Collections;
 public class JumpRaycast : MonoBehaviour {
 	public bool grounded = false;
 	public bool jumped = false;
-	public float jumpHeight,jumpTime;
+	public float jumpHeight;
+	public int jumpTime;
 	public Transform groundedEnd;
 
 	Rigidbody2D rd;
@@ -18,7 +19,6 @@ public class JumpRaycast : MonoBehaviour {
 	void Update () {
 		RayCasting ();
 		Movement ();
-	
 	}
 
 	void RayCasting () {
@@ -31,9 +31,10 @@ public class JumpRaycast : MonoBehaviour {
 	{
 		if (Input.GetKeyDown("space") && grounded == true) {
 			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
-			jumpTime -= Time.deltaTime;
+			jumpTime = 1;
 		}
 
 	}
+
 
 }

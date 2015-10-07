@@ -6,12 +6,12 @@ public class TimeBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.maxTime;
+		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.maxHP;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.currentTime;
+		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.currentHP;
 
 	}
 }

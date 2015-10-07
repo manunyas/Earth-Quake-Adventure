@@ -29,7 +29,7 @@ public class stoneBehavior : MonoBehaviour {
 	{
 		if (StoneTouched == true) {
 			//Time.timeScale = 0;
-			DataCenter.instance.playerDataObject.currentTime -= DataCenter.instance.playerDataObject.damage;
+			DataCenter.instance.playerDataObject.currentHP -= DataCenter.instance.playerDataObject.damage;
 			StoneTouched = false;
 		}
 	}
@@ -37,7 +37,7 @@ public class stoneBehavior : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D collid)
 	{
 		if (collid.gameObject.tag == "Player") {
-			DataCenter.instance.playerDataObject.currentTime -= DataCenter.instance.playerDataObject.damage;
+			DataCenter.instance.playerDataObject.currentHP -= DataCenter.instance.playerDataObject.damage;
 			StoneTouched = false;
 		}
 		

@@ -5,7 +5,7 @@ public class CoinBehavior : MonoBehaviour {
 
 	public Transform CoinBody;
 	public Transform CoinDetect;
-	public bool Detected;
+	public bool CoinTouched;
 	public float Speed, LifeTime;
 	public GameObject coinLife;
 
@@ -31,13 +31,14 @@ public class CoinBehavior : MonoBehaviour {
 	void RayCasting ()
 	{
 		//Debug.DrawLine (CoinBody.position,CoinDetect.position,Color.red);
-		Detected = Physics2D.Linecast (CoinBody.position,CoinDetect.position, 1 << LayerMask.NameToLayer("Player"));
+		CoinTouched = Physics2D.Linecast (CoinBody.position,CoinDetect.position, 1 << LayerMask.NameToLayer("Player"));
 	}
 
 	void Behaviours ()
 	{
-		if (Detected == true) {
+		if (CoinTouched == true) {
 			Destroy(this.gameObject);
+			DataCenter.instance.playerDataObject.CoinCount +=1;
 		} else {
 			coinLife.SetActive (true);
 		}
