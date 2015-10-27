@@ -39,6 +39,7 @@ public class CoinBehavior : MonoBehaviour {
 		if (CoinTouched == true) {
 			Destroy(this.gameObject);
 			DataCenter.instance.playerDataObject.CoinCount +=1;
+			DataCenter.instance.playerDataObject.PointsCount +=10;
 		} else {
 			coinLife.SetActive (true);
 		}

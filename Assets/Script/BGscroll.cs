@@ -16,5 +16,6 @@ public class BGscroll : MonoBehaviour {
 		float x = Mathf.Repeat (Time.time * scrollSpeed, 1);
 		Vector2 offset = new Vector2 (x, 0);
 		renderer.sharedMaterial.SetTextureOffset ("_MainTex", offset);
+		//DataCenter.instance.sceneDataObject.RunScene = false;
 	}
 }

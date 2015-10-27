@@ -36,5 +36,13 @@ public class JumpRaycast : MonoBehaviour {
 
 	}
 
+	public void Jump ()
+	{
+		if (grounded == true) {
+			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
+			jumpTime = 1;
+		}
+	}
+
 
 }
