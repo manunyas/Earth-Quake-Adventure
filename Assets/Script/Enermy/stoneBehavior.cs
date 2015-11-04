@@ -2,16 +2,14 @@
 using System.Collections;
 
 public class stoneBehavior : MonoBehaviour {
-	public float LifeTime;
-	public float speed;
+	public float LifeTime,speed;
 	public Transform StartPoint, EndPoint;
 	public bool StoneTouched;
 
 	void Update () 
 	{
 		RayCasting ();
-		//Touched ();
-
+		//Damge ();
 		transform.position += Vector3.left * Time.deltaTime * speed;
 		if (LifeTime <= 0) {
 			Destroy(this.gameObject);
@@ -21,24 +19,23 @@ public class stoneBehavior : MonoBehaviour {
 
 	void RayCasting ()
 	{
-		//Debug.DrawLine (StartPoint.position,EndPoint.position,Color.blue);
+		Debug.DrawLine (StartPoint.position,EndPoint.position,Color.blue);
 		StoneTouched = Physics2D.Linecast (StartPoint.position, EndPoint.position, 1 << LayerMask.NameToLayer ("Player"));
 	}
 
-	void Touched ()
+	/*void Damage ()
 	{
 		if (StoneTouched == true) {
-			//Time.timeScale = 0;
 			DataCenter.instance.playerDataObject.currentHP -= DataCenter.instance.playerDataObject.damage;
 			StoneTouched = false;
 		}
-	}
+	}*/
 	
 	void OnTriggerEnter2D(Collider2D collid)
 	{
 		if (collid.gameObject.tag == "Player") {
 			DataCenter.instance.playerDataObject.currentHP -= DataCenter.instance.playerDataObject.damage;
-			StoneTouched = false;
+			//StoneTouched = false;
 		}
 		
 	}
