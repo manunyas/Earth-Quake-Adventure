@@ -3,18 +3,17 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class PointsCount : MonoBehaviour {
-	public string pointCount;
+	public string p;
 
 	// Use this for initialization
 	void Start () {
-		pointCount = DataCenter.instance.playerDataObject.PointsCount.ToString ();
-		GetComponent<Text> ().text = pointCount;
-	
+		p = DataCenter.instance.playerDataObject.PointCountFloat.ToString ("n0");
+		GetComponent<Text> ().text = p;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		pointCount = DataCenter.instance.playerDataObject.PointsCount.ToString ();
-		GetComponent<Text> ().text = pointCount;
+		p = DataCenter.instance.playerDataObject.PointCountFloat.ToString ("n0");
+		GetComponent<Text> ().text = p;
 	}
 }

@@ -15,6 +15,15 @@ public class stoneBehavior : MonoBehaviour {
 			Destroy(this.gameObject);
 		}
 		LifeTime -= Time.deltaTime;
+
+		//Stop Motion
+		if (DataCenter.instance.playerDataObject.currentHP < 0) {
+			speed = 0f;
+			Destroy(this.gameObject);
+		}else if (DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage) {
+			speed = 0f;
+			Destroy(this.gameObject);
+		}
 	}
 
 	void RayCasting ()

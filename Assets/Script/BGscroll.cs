@@ -22,7 +22,7 @@ public class BGscroll : MonoBehaviour {
 		if (DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage) {
 			scrollSpeed = 0f;
 		}
-		if (DataCenter.instance.playerDataObject.currentHP < 0) {
+		else if (DataCenter.instance.playerDataObject.currentHP < 0) {
 			scrollSpeed = 0f;
 		}
 	}

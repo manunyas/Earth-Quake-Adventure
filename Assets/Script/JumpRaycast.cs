@@ -5,9 +5,9 @@ public class JumpRaycast : MonoBehaviour {
 	public bool grounded = false;
 	public bool jumped = false,hit = false;
 	public float jumpHeight;
-	public int jumpTime;
 	public Transform groundedEnd;
 	public Animator anim;
+	public int jumpCount;
 
 	Rigidbody2D rd;
 
@@ -34,7 +34,7 @@ public class JumpRaycast : MonoBehaviour {
 
 	void RayCasting () {
 		Debug.DrawLine(this.transform.position, groundedEnd.position,Color.red);
-		//touched the ground
+		//Touched the ground
 		grounded = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 <<LayerMask.NameToLayer("Ground"));
 		//Hit Enermy type obj
 		hit = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Enermy"));
@@ -44,16 +44,23 @@ public class JumpRaycast : MonoBehaviour {
 	{
 		if (Input.GetKeyDown("space") && grounded == true) {
 			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
-			jumpTime = 1;
+			jumpCount +=1;
+		}else if (Input.GetKeyDown("space") && jumpCount > 0){
+			rd.AddForce (Vector2.up * 18f,ForceMode2D.Impulse);
+			jumpCount = 0;
 		}
 
 	}
+	
 
 	public void Jump ()
 	{
 		if (grounded == true) {
 			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
-			jumpTime = 1;
+			jumpCount +=1;
+		}else if (jumpCount > 0){
+			rd.AddForce (Vector2.up * 18f,ForceMode2D.Impulse);
+			jumpCount = 0;
 		}
 	}
 
