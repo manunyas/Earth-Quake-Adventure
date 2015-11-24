@@ -16,14 +16,5 @@ public class BGscroll : MonoBehaviour {
 		float x = Mathf.Repeat (Time.time * scrollSpeed, 1);
 		Vector2 offset = new Vector2 (x, 0);
 		renderer.sharedMaterial.SetTextureOffset ("_MainTex", offset);
-		//DataCenter.instance.sceneDataObject.RunScene = false;
-
-		//Stop Motion
-		if (DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage) {
-			scrollSpeed = 0f;
-		}
-		else if (DataCenter.instance.playerDataObject.currentHP < 0) {
-			scrollSpeed = 0f;
-		}
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour {
-	public bool Hit = false;
+	public bool Hit = false, EndStage = false;
 	public float maxHP,maxStage;
 	public float damage;
 	public float currentHP,currentStage,PointCountFloat;
@@ -20,6 +20,7 @@ public class PlayerData : MonoBehaviour {
 	void Update () {
 		CountStage ();
 		CountPoint ();
+		EndStageCheck ();
 	}
 
 	void CountStage ()
@@ -38,6 +39,18 @@ public class PlayerData : MonoBehaviour {
 			PointCountFloat += Time.deltaTime*n;
 		}
 
+	}
+
+	void EndStageCheck()
+	{
+		//End way
+		if (DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage) {
+			EndStage = true;
+		}
+		//Out of HP
+		else if (DataCenter.instance.playerDataObject.currentHP < 0) {
+			EndStage = true;
+		}
 	}
 	
 
