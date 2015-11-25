@@ -7,7 +7,7 @@ public class TimeBar : MonoBehaviour {
 	public Color maxHPcolor;
 	public Color halfHPcolor;
 	public Image fill;
-	public float dangerHP,halfHP,a,b;
+	public float dangerHP,halfHP;
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,6 @@ public class TimeBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.currentHP;
-		a = DataCenter.instance.playerDataObject.currentHP-1f;
 		changeColor ();
 	}
 	
