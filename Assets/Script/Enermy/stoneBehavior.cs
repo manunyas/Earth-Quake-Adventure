@@ -20,6 +20,9 @@ public class stoneBehavior : MonoBehaviour {
 		if (DataCenter.instance.playerDataObject.EndStage == true) {
 			speed = 0f;
 			Destroy(this.gameObject);
+		}else if (DataCenter.instance.sceneDataObject.StartStage == false) {
+			speed = 0f;
+			Destroy(this.gameObject);
 		}
 	}
 

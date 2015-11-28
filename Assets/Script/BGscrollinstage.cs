@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class BGscrollinstage : MonoBehaviour {
-	public float scrollSpeed;
+	public float scrollSpeedfixed,scrollSpeed;
 	private Renderer renderer;
 	
 	// Use this for initialization
 	void Start () {
 		renderer = GetComponent<Renderer>();
-		
+		scrollSpeed = scrollSpeedfixed;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,10 @@ public class BGscrollinstage : MonoBehaviour {
 		renderer.sharedMaterial.SetTextureOffset ("_MainTex", offset);
 		if (DataCenter.instance.playerDataObject.EndStage == true) {
 			scrollSpeed = 0f;
+		}else if (DataCenter.instance.sceneDataObject.NextEnd == false) {
+			scrollSpeed = 0f;
+		}else if (DataCenter.instance.sceneDataObject.NextEnd == true) {
+			scrollSpeed = scrollSpeedfixed;
 		}
 	}
 }

@@ -18,10 +18,11 @@ public class BranchBehavior : MonoBehaviour {
 		}
 
 		//Obj stop motion
-		if (DataCenter.instance.playerDataObject.currentHP < 0) {
+		//End the stage and before start stage
+		if (DataCenter.instance.playerDataObject.EndStage == true) {
 			Speed = 0f;
 			Destroy(this.gameObject);
-		}else if (DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage) {
+		}else if (DataCenter.instance.sceneDataObject.StartStage == false) {
 			Speed = 0f;
 			Destroy(this.gameObject);
 		}

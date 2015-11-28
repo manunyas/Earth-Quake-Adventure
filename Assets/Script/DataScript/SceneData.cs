@@ -5,34 +5,37 @@ using UnityEngine.UI;
 public class SceneData : MonoBehaviour {
 	public bool NextEnd;
 	public bool RunScene;
+	public bool StartStage;
 
 	// Use this for initialization
 	void Start () {
 		NextEnd = false;
-		RunScene = false;
+		RunScene = true;
+		StartStage = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		checkNext ();
-		run ();
+		RunTheScene ();
+		changeStartStage ();
 	}
 
-	void checkNext()
-	{
-		if (NextEnd == true) {
-			RunScene = true;
-			NextEnd = false;
-		}
-	}
-
-	void run()
+	//use time scale it stop all things in scene
+	void RunTheScene()
 	{
 		if (RunScene == true) {
 			Time.timeScale = 1;
-		}
-		if (RunScene == false) {
+		}else if (RunScene == false) {
 			Time.timeScale = 0;
+		}
+	}
+
+	void changeStartStage()
+	{
+		if (NextEnd == true) {
+			StartStage = true;
+		}else if (NextEnd == false) {
+			StartStage = false;
 		}
 	}
 }

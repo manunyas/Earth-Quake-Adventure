@@ -22,7 +22,7 @@ public class PlayerControll : MonoBehaviour {
 		Movement ();
 		Hit ();
 		
-		//Stop motion when die or complete mission
+		//Stop motion when die or complete mission or dont start stage
 		if (DataCenter.instance.playerDataObject.EndStage == true) {
 			anim.Stop();
 		}
@@ -42,11 +42,9 @@ public class PlayerControll : MonoBehaviour {
 		if (Input.GetKeyDown("space") && grounded == true) {
 			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
 			jumpCount +=1;
-			rd.gravityScale = 5;
 		}else if (Input.GetKeyDown("space") && jumpCount > 0){
 			rd.AddForce (Vector2.up * 8f,ForceMode2D.Impulse);
 			jumpCount = 0;
-			rd.gravityScale = 3;
 		}
 		
 	}
@@ -55,11 +53,9 @@ public class PlayerControll : MonoBehaviour {
 	{
 		if (grounded == true) {
 			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
-			rd.gravityScale = 4;
 			jumpCount +=1;
 		}else if (jumpCount > 0){
 			rd.AddForce (Vector2.up * jumpHeight/2,ForceMode2D.Impulse);
-			rd.gravityScale = 5;
 			jumpCount = 0;
 		}
 	}

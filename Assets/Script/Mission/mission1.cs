@@ -106,7 +106,7 @@ public class mission1 : MonoBehaviour {
 	public void restagePress()
 	{
 		DieCanvas.enabled = false;
-		Application.LoadLevel (3);
+		Application.LoadLevel (4);
 	}
 
 
