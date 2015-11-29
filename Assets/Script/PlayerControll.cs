@@ -39,16 +39,23 @@ public class PlayerControll : MonoBehaviour {
 
 	void Movement ()
 	{
-		if (Input.GetKeyDown("space") && grounded == true) {
-			rd.AddForce (Vector2.up * jumpHeight,ForceMode2D.Impulse);
-			jumpCount +=1;
-		}else if (Input.GetKeyDown("space") && jumpCount > 0){
-			rd.AddForce (Vector2.up * 8f,ForceMode2D.Impulse);
+		if (Input.GetKeyDown ("space") && grounded == true) {
+			rd.AddForce (Vector2.up * jumpHeight, ForceMode2D.Impulse);
+			jumpCount += 1;
+		} else if (Input.GetKeyDown ("space") && jumpCount > 0) {
+			rd.AddForce (Vector2.up * 8f, ForceMode2D.Impulse);
 			jumpCount = 0;
 		}
+
+		/*if (Input.GetKey (KeyCode.DownArrow) && grounded == true) {
+			anim.SetBool ("isSlide", true);
+		} else {
+			anim.SetBool ("isSlide", false);
+		}*/
 		
 	}
 
+	//For Button
 	public void Jump ()
 	{
 		if (grounded == true) {
@@ -59,7 +66,18 @@ public class PlayerControll : MonoBehaviour {
 			jumpCount = 0;
 		}
 	}
-	
+
+	public void SlideDown()
+	{
+			anim.SetTrigger("isSliding");
+	}
+
+	public void SlideUp()
+	{
+			anim.SetTrigger("isSliding");
+	}
+	//
+
 	void Hit()
 	{
 		if (hit == true) {
