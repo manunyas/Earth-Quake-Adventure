@@ -25,12 +25,15 @@ public class PlayerData : MonoBehaviour {
 
 	void CountStage ()
 	{
-		if (currentHP > 0) {
-			currentStage += Time.deltaTime;
+		if (DataCenter.instance.sceneDataObject.StartStage == true) {
+			if (currentHP > 0) {
+				currentStage += Time.deltaTime;
+			}
+			if (currentHP < 0) {
+				currentStage += 0;
+			}
 		}
-		if (currentHP < 0) {
-			currentStage += 0;
-		}
+
 	}
 
 	void CountPoint()
