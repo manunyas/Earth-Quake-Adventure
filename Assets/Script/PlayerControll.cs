@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerControll : MonoBehaviour {
 	public bool grounded = false;
 	public bool hit = false;
+	public bool hitSpecial = false;
 	public float jumpHeight;
 	public Transform groundedEnd;
 	public Animator anim;
@@ -35,6 +36,9 @@ public class PlayerControll : MonoBehaviour {
 		grounded = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 <<LayerMask.NameToLayer("Ground"));
 		//Hit Enermy type obj
 		hit = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Enermy"));
+		//Hit Special Enermy obj or special Obj
+		hitSpecial = Physics2D.Linecast (this.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("EnermySP"));
+		hitSpecial = Physics2D.Linecast (this.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("Special"));
 	}
 
 	void Movement ()

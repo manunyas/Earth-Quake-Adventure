@@ -6,7 +6,7 @@ public class NextButton : MonoBehaviour {
 	public Canvas Mission;
 	public Text missionTxt, knowledgeTxt, head1, head2;
 	public Button nextBtn;
-	public int countNextpress;
+	public int countNextpress,countNextToEnd;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +34,7 @@ public class NextButton : MonoBehaviour {
 
 	void countNextBtn()
 	{
-		if (countNextpress == 2) {
+		if (countNextpress == countNextToEnd) {
 			DataCenter.instance.sceneDataObject.NextEnd = true;
 			gameObject.SetActive (false);
 		}else if (countNextpress == 1) {
