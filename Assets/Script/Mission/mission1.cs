@@ -109,5 +109,10 @@ public class mission1 : MonoBehaviour {
 		Application.LoadLevel (4);
 	}
 
+	public void nextstagePress()
+	{
+		Application.LoadLevel (5);
+	}
+
 
 }
