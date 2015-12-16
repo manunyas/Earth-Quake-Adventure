@@ -19,10 +19,10 @@ public class ValleyMenuControl : MonoBehaviour {
 	}
 
 	public void PressBack(){
-		Application.LoadLevel (2);
+		Application.LoadLevel (3);
 	}
 	public void PressS1()
 	{
-		Application.LoadLevel (4);
+		Application.LoadLevel (5);
 	}
 }

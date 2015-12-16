@@ -25,10 +25,10 @@ public class MainMapControl : MonoBehaviour {
 	}
 
 	public void StartLevel(){
-		Application.LoadLevel (3);
+		Application.LoadLevel (4);
 	}
 	public void back(){
-		Application.LoadLevel (1);
+		Application.LoadLevel (2);
 	}
 
 }
