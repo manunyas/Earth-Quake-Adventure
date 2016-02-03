@@ -1,15 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class mission2 : MonoBehaviour {
+	public Canvas questionCanvas,ResultCanvas,popupNoticeCanvas,DieCanvas;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
+
 }

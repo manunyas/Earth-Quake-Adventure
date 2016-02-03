@@ -28,7 +28,7 @@ public class MainMapControl : MonoBehaviour {
 		Application.LoadLevel (4);
 	}
 	public void back(){
-		Application.LoadLevel (2);
+		Application.LoadLevel (1);
 	}
 
 }
