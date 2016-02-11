@@ -92,4 +92,16 @@ public class FBscript : MonoBehaviour {
 			ProfilePic.sprite = Sprite.Create (result.Texture, new Rect (0, 0, 128, 128), new Vector2 ());
 		} 
 	}
+
+	//All Scores API
+
+	public void QueryScores()
+	{
+		
+	}
+
+	public void SetScore()
+	{
+		
+	}
 }
