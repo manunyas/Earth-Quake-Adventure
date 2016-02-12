@@ -6,7 +6,7 @@ public class PlayerControll : MonoBehaviour {
 	public bool hit = false;
 	public bool hitSpecial = false;
 	public float jumpHeight;
-	public Transform groundedEnd;
+	public Transform groundedEnd,headEnd;
 	public Animator anim;
 	public int jumpCount;
 	Rigidbody2D rd;
@@ -30,15 +30,16 @@ public class PlayerControll : MonoBehaviour {
 	}
 
 	void RayCasting () {
-		Debug.DrawLine(this.transform.position, groundedEnd.position,Color.red);
+		//Debug.DrawLine(this.transform.position, groundedEnd.position,Color.red);
+		Debug.DrawLine(headEnd.transform.position, groundedEnd.position,Color.red);
 
 		//Touched the ground
-		grounded = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 <<LayerMask.NameToLayer("Ground"));
+		grounded = Physics2D.Linecast (headEnd.transform.position, groundedEnd.position, 1 <<LayerMask.NameToLayer("Ground"));
 		//Hit Enermy type obj
-		hit = Physics2D.Linecast (this.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Enermy"));
+		hit = Physics2D.Linecast (headEnd.transform.position, groundedEnd.position, 1 << LayerMask.NameToLayer ("Enermy"));
 		//Hit Special Enermy obj or special Obj
-		hitSpecial = Physics2D.Linecast (this.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("EnermySP"));
-		hitSpecial = Physics2D.Linecast (this.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("Special"));
+		hitSpecial = Physics2D.Linecast (headEnd.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("EnermySP"));
+		hitSpecial = Physics2D.Linecast (headEnd.transform.position,groundedEnd.position, 1<<LayerMask.NameToLayer("SpecialLayer"));
 	}
 
 	void Movement ()

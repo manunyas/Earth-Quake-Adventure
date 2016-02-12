@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Story2 : MonoBehaviour {
-	public Canvas scene1,scene2,scene3,scene4,scene5,scene6,scene7,missionCanvas;
+	public Canvas scene1,scene2,scene3,scene4,scene5,missionCanvas;
 	public Button nextButton;
 	public int countNextpress;
 
@@ -14,8 +14,6 @@ public class Story2 : MonoBehaviour {
 		scene3 = scene3.GetComponent<Canvas> ();
 		scene4 = scene4.GetComponent<Canvas> ();
 		scene5 = scene5.GetComponent<Canvas> ();
-		scene6 = scene6.GetComponent<Canvas> ();
-		scene7 = scene7.GetComponent<Canvas> ();
 		missionCanvas = missionCanvas.GetComponent<Canvas> ();
 		nextButton = nextButton.GetComponent<Button> ();
 
@@ -23,8 +21,6 @@ public class Story2 : MonoBehaviour {
 		scene3.enabled = false;
 		scene4.enabled = false;
 		scene5.enabled = false;
-		scene6.enabled = false;
-		scene7.enabled = false;
 		missionCanvas.enabled = false;
 
 	}
