@@ -141,6 +141,8 @@ public class FBscript : MonoBehaviour {
 			ScoreName.text = user["name"].ToString();
 			ScoreScore.text = entry["score"].ToString();
 
+			//avatar
+
 			Transform TheUserAvatar = ScorePanel.transform.Find ("FriendAvatar");
 			Image UserAvatar = TheUserAvatar.GetComponent<Image>();
 
