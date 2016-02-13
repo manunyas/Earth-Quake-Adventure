@@ -1,0 +1,88 @@
+fileFormatVersion: 2
+guid: 618a78a992326f64c9262ee92f0ad857
+timeCreated: 1454762428
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: enermy_bird2_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: enermy_bird2_0
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 171
+        width: 357
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 69.5, y: -7.5}
+        - {x: 127.5, y: 28.5}
+        - {x: 178.5, y: 63.5}
+        - {x: 178.5, y: 108.5}
+        - {x: 161.5, y: 127.5}
+        - {x: 63.5, y: 127.5}
+        - {x: -147.5, y: 77.5}
+        - {x: -178.5, y: 28.5}
+        - {x: -178.5, y: -7.5}
+        - {x: -65.5, y: -70.5}
+        - {x: -26.5, y: -122.5}
+        - {x: -19.5, y: -127.5}
+        - {x: 14.5, y: -127.5}
+        - {x: 44.5, y: -86.5}
+        - {x: 94.5, y: -127.5}
+        - {x: 160.5, y: -127.5}
+        - {x: 178.5, y: -119.5}
+        - {x: 178.5, y: -67.5}
+        - {x: 129.5, y: -44.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

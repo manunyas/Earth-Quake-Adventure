@@ -1,0 +1,130 @@
+fileFormatVersion: 2
+guid: 3ef8b9f546ebb7041abc0ff8c3d88407
+timeCreated: 1455353112
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: stage7minigame_ans1_0
+    21300002: stage7minigame_ans1_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: stage7minigame_ans1_0
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 347
+        width: 504
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 164, y: -136}
+        - {x: 186, y: -135}
+        - {x: 232, y: -133}
+        - {x: 252, y: -132}
+        - {x: 252, y: -63}
+        - {x: 251, y: -40}
+        - {x: 250, y: -18}
+        - {x: 245, y: 97}
+        - {x: 243, y: 142}
+        - {x: 242, y: 151}
+        - {x: 185, y: 151}
+        - {x: 116, y: 148}
+        - {x: 71, y: 146}
+        - {x: -44, y: 141}
+        - {x: -66, y: 140}
+        - {x: -204, y: 134}
+        - {x: -226, y: 133}
+        - {x: -249, y: 132}
+        - {x: -252, y: 131}
+        - {x: -252, y: 63}
+        - {x: -249, y: -6}
+        - {x: -248, y: -28}
+        - {x: -243, y: -143}
+        - {x: -242, y: -151}
+        - {x: -180, y: -151}
+        - {x: 4, y: -143}
+        - {x: 26, y: -142}
+    - name: stage7minigame_ans1_1
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 345
+        width: 466
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 230, y: 17.5}
+        - {x: 232, y: 60.5}
+        - {x: 233, y: 82.5}
+        - {x: 233, y: 139.5}
+        - {x: 217, y: 140.5}
+        - {x: 196, y: 141.5}
+        - {x: -2, y: 150.5}
+        - {x: -45, y: 152.5}
+        - {x: -89, y: 154.5}
+        - {x: -156, y: 157.5}
+        - {x: -222, y: 157.5}
+        - {x: -223, y: 137.5}
+        - {x: -232, y: -60.5}
+        - {x: -233, y: -83.5}
+        - {x: -233, y: -138.5}
+        - {x: -223, y: -139.5}
+        - {x: -113, y: -144.5}
+        - {x: -70, y: -146.5}
+        - {x: 128, y: -155.5}
+        - {x: 171, y: -157.5}
+        - {x: 222, y: -157.5}
+        - {x: 224, y: -114.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
