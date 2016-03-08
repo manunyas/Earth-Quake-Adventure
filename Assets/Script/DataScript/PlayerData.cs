@@ -7,7 +7,7 @@ public class PlayerData : MonoBehaviour {
 	public float maxHP,maxStage;
 	public float damage;
 	public float currentHP,currentStage,PointCountFloat;
-	public int n,CoinCount,PointCount;
+	public int n,CoinCount,PointCount,bonusPointCount;
 
 	// Use this for initialization
 	void Start () {

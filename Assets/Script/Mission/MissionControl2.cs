@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MissionControl2 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas;
 	public Text rightTxt,wrongTxt;
-	public int pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,point;
+	public int pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,point,currentPoint,finalPoint;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +28,8 @@ public class MissionControl2 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		currentPoint = DataCenter.instance.playerDataObject.PointCount;
+
 		Goal ();
 		mainquestCheck ();
 
@@ -44,8 +46,10 @@ public class MissionControl2 : MonoBehaviour {
 	void mainquestCheck()
 	{
 		if(pressCount == rightAnswerNo){
-			DataCenter.instance.playerDataObject.PointCount = DataCenter.instance.playerDataObject.PointCount * bonusPoint;
-			DataCenter.instance.playerDataObject.n = 500;
+			//Calculate last score
+			finalPoint = currentPoint * bonusPoint;
+			DataCenter.instance.playerDataObject.bonusPointCount = finalPoint;
+			DataCenter.instance.playerDataObject.n = 100;
 			ResultCanvas.enabled = true;
 			rightTxt.enabled = true;
 			wrongTxt.enabled = false;
