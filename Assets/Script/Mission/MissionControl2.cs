@@ -90,4 +90,9 @@ public class MissionControl2 : MonoBehaviour {
 	{
 		Application.LoadLevel (nextScene);
 	}
+
+	public void PressHome()
+	{
+		Application.LoadLevel (3);
+	}
 }
