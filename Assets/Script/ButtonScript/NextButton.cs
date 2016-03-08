@@ -57,7 +57,7 @@ public class NextButton : MonoBehaviour {
 	void countNextBtn()
 	{
 		if (countNextpress == countNextToEnd) {
-			DataCenter.instance.sceneDataObject.NextEnd = true;
+			DataCenter.instance.sceneDataObject.NextEnd = true; //Important to Start the game
 			gameObject.SetActive (false);
 		}else if (countNextpress == 0) {
 			scene2.enabled = false;

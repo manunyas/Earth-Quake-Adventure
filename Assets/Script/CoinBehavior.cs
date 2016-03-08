@@ -42,7 +42,7 @@ public class CoinBehavior : MonoBehaviour {
 
 	void RayCasting ()
 	{
-		//Debug.DrawLine (CoinBody.position,CoinDetect.position,Color.red);
+		Debug.DrawLine (CoinBody.position,CoinDetect.position,Color.red);
 		CoinTouched = Physics2D.Linecast (CoinBody.position,CoinDetect.position, 1 << LayerMask.NameToLayer("Player"));
 	}
 

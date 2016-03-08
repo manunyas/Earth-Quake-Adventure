@@ -11,7 +11,7 @@ public class PlayerData : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		CoinCount = 0;
+		CoinCount = 0; //Main Object that need to count and show
 		PointCount = 0;
 		PointCountFloat = 0;
 	}
