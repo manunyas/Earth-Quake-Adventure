@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class MissionControl1 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas,toastCanvas;
-	public Text FailTxt, DieTxt,rightTxt,wrongTxt;
-	public bool sidequest_success = false;
-	public int sidequestCoins,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint;
+	public Text FailTxt, DieTxt,rightTxt,wrongTxt,bonusTxt;
+	public bool sidequest_success = false,test;
+	public int sidequestCoins,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,currentPoint,finalPoint;
 	public float toastLifeTime;
 
 	// Use this for initialization
@@ -23,6 +23,7 @@ public class MissionControl1 : MonoBehaviour {
 		DieTxt = DieTxt.GetComponent<Text> ();
 		rightTxt = rightTxt.GetComponent<Text> ();
 		wrongTxt = wrongTxt.GetComponent<Text> ();
+		bonusTxt = bonusTxt.GetComponent<Text> ();
 
 		questionCanvas.enabled = false;
 		ResultCanvas.enabled = false;
@@ -36,6 +37,8 @@ public class MissionControl1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		currentPoint = DataCenter.instance.playerDataObject.PointCount;
+
 		Goal ();
 		sidequestCheck ();
 		mainquestCheck ();
@@ -69,8 +72,11 @@ public class MissionControl1 : MonoBehaviour {
 	void mainquestCheck()
 	{
 		if(pressCount == rightAnswerNo){
-			DataCenter.instance.playerDataObject.PointCount = DataCenter.instance.playerDataObject.PointCount * bonusPoint;
-			DataCenter.instance.playerDataObject.n = 500;
+			
+			//Calculate last score
+			finalPoint = currentPoint * bonusPoint;
+			DataCenter.instance.playerDataObject.bonusPointCount = finalPoint;
+			//Show result
 			ResultCanvas.enabled = true;
 			rightTxt.enabled = true;
 			wrongTxt.enabled = false;

@@ -31,7 +31,7 @@ public class BranchBehavior : MonoBehaviour {
 
 	void RayCasting ()
 	{
-		Debug.DrawLine (StartPoint.position,EndPoint.position,Color.blue);
+		Debug.DrawLine (StartPoint.position,EndPoint.position,Color.red);
 		BranchTouch = Physics2D.Linecast (StartPoint.position, EndPoint.position, 1 << LayerMask.NameToLayer ("Player"));
 	}
 
