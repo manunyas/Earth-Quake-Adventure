@@ -24,7 +24,7 @@ public class MainMapControl : MonoBehaviour {
 		backButton.enabled = true;
 	}
 
-	public void StartLevel(){
+	public void StartLevelValley(){
 		Application.LoadLevel (4);
 	}
 	public void back(){
