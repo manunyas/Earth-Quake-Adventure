@@ -4,10 +4,11 @@ using UnityEngine.UI;
 
 public class MissionControl1 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas,toastCanvas;
-	public Text FailTxt, DieTxt,rightTxt,wrongTxt,bonusTxt;
+	public Text FailTxt, DieTxt,rightTxt,wrongTxt,bonusTxt,archiveText;
 	public bool sidequest_success = false,test;
 	public int sidequestCoins,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,currentPoint,finalPoint;
 	public float toastLifeTime;
+
 
 	// Use this for initialization
 	void Start () 
@@ -24,6 +25,7 @@ public class MissionControl1 : MonoBehaviour {
 		rightTxt = rightTxt.GetComponent<Text> ();
 		wrongTxt = wrongTxt.GetComponent<Text> ();
 		bonusTxt = bonusTxt.GetComponent<Text> ();
+		archiveText = archiveText.GetComponent<Text> ();
 
 		questionCanvas.enabled = false;
 		ResultCanvas.enabled = false;
@@ -80,6 +82,7 @@ public class MissionControl1 : MonoBehaviour {
 			ResultCanvas.enabled = true;
 			rightTxt.enabled = true;
 			wrongTxt.enabled = false;
+			archiveText.enabled = true;
 			questionCanvas.enabled = false;
 			NextstgCanvas.enabled = true;
 		}
@@ -95,6 +98,7 @@ public class MissionControl1 : MonoBehaviour {
 		ResultCanvas.enabled = true;
 		rightTxt.enabled = false;
 		wrongTxt.enabled = true;
+		archiveText.enabled = false;
 		questionCanvas.enabled = false;
 		RestgCanvas.enabled = true;
 	}

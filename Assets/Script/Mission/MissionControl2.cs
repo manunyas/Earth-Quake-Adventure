@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class MissionControl2 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas;
-	public Text rightTxt,wrongTxt;
+	public Text rightTxt,wrongTxt,archiveText;
 	public int pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,point,currentPoint,finalPoint;
 
 	// Use this for initialization
@@ -17,6 +17,7 @@ public class MissionControl2 : MonoBehaviour {
 
 		rightTxt = rightTxt.GetComponent<Text> ();
 		wrongTxt = wrongTxt.GetComponent<Text> ();
+		archiveText = archiveText.GetComponent<Text> ();
 
 		questionCanvas.enabled = false;
 		ResultCanvas.enabled = false;
@@ -62,6 +63,7 @@ public class MissionControl2 : MonoBehaviour {
 			rightTxt.enabled = false;
 			RestgCanvas.enabled = true;
 			NextstgCanvas.enabled = false;
+			archiveText.enabled = true;
 		}
 	}
 
@@ -69,6 +71,7 @@ public class MissionControl2 : MonoBehaviour {
 	{
 		pressCount += 1;
 		DataCenter.instance.playerDataObject.PointCount += point;
+		archiveText.enabled = false;
 	}
 
 	public void wrongPress()
