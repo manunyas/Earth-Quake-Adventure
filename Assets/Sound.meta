@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 236481a27799e4df08c6526a40fdc754
 folderAsset: yes
 timeCreated: 1457618656
+=======
+guid: d1120baa86ecd2a409afbc0a8a4078d8
+folderAsset: yes
+timeCreated: 1457634579
+>>>>>>> Thonyatorn/master
 licenseType: Free
 DefaultImporter:
   userData: 
