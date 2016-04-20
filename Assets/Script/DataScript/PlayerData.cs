@@ -7,13 +7,14 @@ public class PlayerData : MonoBehaviour {
 	public float maxHP,maxStage;
 	public float damage;
 	public float currentHP,currentStage,PointCountFloat;
-	public int n,CoinCount,PointCount,bonusPointCount;
+	public int n,CoinCount,PointCount,bonusPointCount,specialCount;
 
 	// Use this for initialization
 	void Start () {
 		CoinCount = 0; //Main Object that need to count and show
 		PointCount = 0;
 		PointCountFloat = 0;
+		specialCount = 0;
 	}
 	
 	// Update is called once per frame

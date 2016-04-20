@@ -42,7 +42,6 @@ public class Player2Control : MonoBehaviour {
 	public void ShootingTrigger()
 	{
 		anim.SetTrigger ("isShoot2");
-		anim.SetTrigger ("isShooting");
 	}
 
 	public void PressJump ()

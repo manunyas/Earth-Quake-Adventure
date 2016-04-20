@@ -49,7 +49,7 @@ public class SpecialObjBehavior : MonoBehaviour {
 	{
 		if (ObjTouched == true) {
 			Destroy(this.gameObject);
-			DataCenter.instance.playerDataObject.CoinCount +=1;
+			DataCenter.instance.playerDataObject.specialCount += 1;
 			DataCenter.instance.playerDataObject.PointCount +=ObjPoint;
 		} else {
 			ObjLife.SetActive (true);
