@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MissionControl1 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas,toastCanvas;
 	public Text FailTxt, DieTxt,rightTxt,wrongTxt,bonusTxt,archiveText;
-	public bool sidequest_success = false,test;
+	public bool sidequest_success = false;
 	public int sidequestCoins,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,currentPoint,finalPoint;
 	public float toastLifeTime;
 
@@ -60,8 +60,8 @@ public class MissionControl1 : MonoBehaviour {
 			//Success all situation before question		
 		}else if(sidequest_success == true && DataCenter.instance.playerDataObject.currentHP < 0){
 			DieCanvas.enabled = true;
-			FailTxt.enabled = true;
-			DieTxt.enabled = false;
+			FailTxt.enabled = false;
+			DieTxt.enabled = true;
 			//Success sidequest but die situation
 		}else if(sidequest_success == false && DataCenter.instance.playerDataObject.currentHP > 0 && DataCenter.instance.playerDataObject.currentStage > DataCenter.instance.playerDataObject.maxStage){
 			DieCanvas.enabled = true;
