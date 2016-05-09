@@ -20,7 +20,6 @@
 
 namespace Facebook.Unity.Editor
 {
-    using System;
     using System.Collections.Generic;
     using UnityEngine;
 
@@ -29,37 +28,24 @@ namespace Facebook.Unity.Editor
         private Rect modalRect;
         private GUIStyle modalStyle;
 
-        public EditorFacebookMockDialog()
-        {
-            this.modalRect = new Rect(10, 10, Screen.width - 20, Screen.height - 20);
-            Texture2D texture = new Texture2D(1, 1);
-            texture.SetPixel(0, 0, new Color(0.2f, 0.2f, 0.2f, 1.0f));
-            texture.Apply();
-            this.modalStyle = new GUIStyle(GUI.skin.window);
-            this.modalStyle.normal.background = texture;
-        }
-
-        public delegate void OnComplete(string result);
-
-        public OnComplete Callback { protected get; set; }
+        public Utilities.Callback<ResultContainer> Callback { protected get; set; }
 
         public string CallbackID { protected get; set; }
 
         protected abstract string DialogTitle { get; }
 
+        public void Start()
+        {
+            this.modalRect = new Rect(10, 10, Screen.width - 20, Screen.height - 20);
+            Texture2D texture = new Texture2D(1, 1);
+            texture.SetPixel(0, 0, new Color(0.2f, 0.2f, 0.2f, 1.0f));
+            texture.Apply();
+            this.modalStyle = new GUIStyle();
+            this.modalStyle.normal.background = texture;
+        }
+
         public void OnGUI()
         {
-			if (this.modalStyle == null) 
-			{
-				this.modalRect = new Rect (10, 10, Screen.width - 20, Screen.height - 20);
-				this.modalStyle = new GUIStyle (GUI.skin.window);
-				Texture2D texture = new Texture2D (1, 1);
-				texture.SetPixel (0, 0, new Color (0.2f, 0.2f, 0.2f, 1.0f));
-				texture.Apply ();
-				this.modalStyle.normal.background = texture;
-			}
-
-
             GUI.ModalWindow(
                 this.GetHashCode(),
                 this.modalRect,
@@ -81,7 +67,7 @@ namespace Facebook.Unity.Editor
                 dictionary[Constants.CallbackIdKey] = this.CallbackID;
             }
 
-            this.Callback(MiniJSON.Json.Serialize(dictionary));
+            this.Callback(new ResultContainer(dictionary.ToJson()));
         }
 
         protected virtual void SendErrorResult(string errorMessage)
@@ -93,7 +79,7 @@ namespace Facebook.Unity.Editor
                 dictionary[Constants.CallbackIdKey] = this.CallbackID;
             }
 
-            this.Callback(MiniJSON.Json.Serialize(dictionary));
+            this.Callback(new ResultContainer(dictionary.ToJson()));
         }
 
         private void OnGUIDialog(int windowId)
