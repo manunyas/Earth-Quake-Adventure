@@ -6,9 +6,41 @@ public class NextButton : MonoBehaviour {
 	public Canvas scene1,scene2,scene3,scene4,scene5,scene6,scene7,missionCanvas;
 	public Button nextButton,previousButton;
 	public int countNextpress,countNextToEnd,countToStart;
+	public float maxStage,currentHP;
+	public bool endStage = false;
 
 	// Use this for initialization
 	void Start () {
+		//==========Load Data from playerInfo==========
+		DataCenter.instance.Load();
+
+		//===========Reset data from last EP===========
+		//Reset SceneData
+		DataCenter.instance.sceneDataObject.NextEnd = false;
+		DataCenter.instance.sceneDataObject.StartStage = false;
+
+		//Reset PlayerData
+		DataCenter.instance.playerDataObject.currentStage = 0;
+		DataCenter.instance.playerDataObject.PointCount = 0;
+		DataCenter.instance.playerDataObject.CoinCount = 0;
+		DataCenter.instance.playerDataObject.specialCount = 0;
+		DataCenter.instance.playerDataObject.bonusPointCount = 0;
+		DataCenter.instance.playerDataObject.currentHP = DataCenter.instance.playerDataObject.maxHP;
+		DataCenter.instance.playerDataObject.maxStage = maxStage;
+		DataCenter.instance.playerDataObject.EndStage = false;
+
+		//===========Check maxHP by Level for setting PlayerData============
+		/*currentEXP = DataCenter.instance.playerDataObject.exp;
+		if (currentEXP < 600) {
+			DataCenter.instance.playerDataObject.maxHP = 70;
+		}else if (currentEXP < 1138) {
+			DataCenter.instance.playerDataObject.maxHP = 72;
+		}else if (currentEXP < 2157) {
+			DataCenter.instance.playerDataObject.maxHP = 74;
+		}else if (currentEXP < 4089) {
+			DataCenter.instance.playerDataObject.maxHP = 78;
+		}*/
+
 		scene1 = scene1.GetComponent<Canvas> ();
 		scene2 = scene2.GetComponent<Canvas> ();
 		scene3 = scene3.GetComponent<Canvas> ();
@@ -54,6 +86,7 @@ public class NextButton : MonoBehaviour {
 			previousButton.enabled = true;
 		}
 	}
+		
 	void countNextBtn()
 	{
 		if (countNextpress == countNextToEnd) {

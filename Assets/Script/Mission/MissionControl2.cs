@@ -69,6 +69,7 @@ public class MissionControl2 : MonoBehaviour {
 	{
 		pressCount += 1;
 		DataCenter.instance.playerDataObject.PointCount += point;
+		DataCenter.instance.playerDataObject.exp += point;
 	}
 
 	public void wrongPress()
@@ -88,6 +89,8 @@ public class MissionControl2 : MonoBehaviour {
 
 	public void nextstagePress()
 	{
+		DataCenter.instance.playerDataObject.exp += finalPoint; //Add Bonus point to exp
+		DataCenter.instance.Save (); //Save data before star new stage
 		Application.LoadLevel (nextScene);
 	}
 

@@ -119,6 +119,8 @@ public class MinigameMatch1 : MonoBehaviour {
 
 	public void nextstagePress()
 	{
+		DataCenter.instance.playerDataObject.exp += finalPoint; //Add Bonus point to exp
+		DataCenter.instance.Save (); //Save data before star new stage
 		Application.LoadLevel (NextStage);
 	}
 

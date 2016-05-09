@@ -47,7 +47,8 @@ public class RainbowStoneBehavior : MonoBehaviour {
 	{
 		if (rbTouched == true) {
 			Destroy(this.gameObject);
-			DataCenter.instance.playerDataObject.PointCount +=200;
+			DataCenter.instance.playerDataObject.PointCount +=200; //reset everytime to start new stage
+			DataCenter.instance.playerDataObject.exp += 200; //Add always game wake
 		} else {
 			rbstoneLife.SetActive (true);
 		}
