@@ -50,7 +50,8 @@ public class SpecialObjBehavior : MonoBehaviour {
 		if (ObjTouched == true) {
 			Destroy(this.gameObject);
 			DataCenter.instance.playerDataObject.specialCount += 1;
-			DataCenter.instance.playerDataObject.PointCount +=ObjPoint;
+			DataCenter.instance.playerDataObject.PointCount += ObjPoint;
+			DataCenter.instance.playerDataObject.exp += ObjPoint;
 		} else {
 			ObjLife.SetActive (true);
 		}

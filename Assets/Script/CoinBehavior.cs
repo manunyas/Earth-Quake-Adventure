@@ -50,8 +50,9 @@ public class CoinBehavior : MonoBehaviour {
 	{
 		if (CoinTouched == true) {
 			Destroy(this.gameObject);
-			DataCenter.instance.playerDataObject.CoinCount +=1;
-			DataCenter.instance.playerDataObject.PointCount +=10;
+			DataCenter.instance.playerDataObject.CoinCount +=1; //reset everytime to start new stage
+			DataCenter.instance.playerDataObject.PointCount +=10; //reset everytime to start new stage
+			DataCenter.instance.playerDataObject.exp += 10; //Add always game wake
 		} else {
 			coinLife.SetActive (true);
 		}

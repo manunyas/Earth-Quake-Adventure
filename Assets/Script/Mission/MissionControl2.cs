@@ -71,7 +71,11 @@ public class MissionControl2 : MonoBehaviour {
 	{
 		pressCount += 1;
 		DataCenter.instance.playerDataObject.PointCount += point;
+<<<<<<< HEAD
 		archiveText.enabled = false;
+=======
+		DataCenter.instance.playerDataObject.exp += point;
+>>>>>>> Thonyatorn/master
 	}
 
 	public void wrongPress()
@@ -91,6 +95,8 @@ public class MissionControl2 : MonoBehaviour {
 
 	public void nextstagePress()
 	{
+		DataCenter.instance.playerDataObject.exp += finalPoint; //Add Bonus point to exp
+		DataCenter.instance.Save (); //Save data before star new stage
 		Application.LoadLevel (nextScene);
 	}
 

@@ -6,7 +6,7 @@ public class MissionControl1 : MonoBehaviour {
 	public Canvas questionCanvas,ResultCanvas,DieCanvas,RestgCanvas,NextstgCanvas,toastCanvas;
 	public Text FailTxt, DieTxt,rightTxt,wrongTxt,bonusTxt,archiveText;
 	public bool sidequest_success = false;
-	public int sidequestCoins,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,currentPoint,finalPoint;
+	public int sidequestCoins,sidequestSpecialObj,pressCount,rightAnswerNo,currentScene,nextScene,bonusPoint,currentPoint,finalPoint;
 	public float toastLifeTime;
 
 
@@ -106,10 +106,12 @@ public class MissionControl1 : MonoBehaviour {
 
 	void sidequestCheck()
 	{
-		if(DataCenter.instance.playerDataObject.CoinCount > sidequestCoins)
-		{
+		if (DataCenter.instance.playerDataObject.CoinCount > sidequestCoins) {
 			sidequest_success = true;
-		}else {
+		} else if (DataCenter.instance.playerDataObject.specialCount > sidequestSpecialObj) {
+			sidequest_success = true;
+		}
+		else {
 			sidequest_success = false;
 		}
 	}
@@ -136,6 +138,8 @@ public class MissionControl1 : MonoBehaviour {
 
 	public void nextstagePress()
 	{
+		DataCenter.instance.playerDataObject.exp += finalPoint; //Add Bonus point to exp
+		DataCenter.instance.Save (); //Save data before star new stage
 		Application.LoadLevel (nextScene);
 	}
 }
