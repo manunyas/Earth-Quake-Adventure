@@ -71,11 +71,8 @@ public class MissionControl2 : MonoBehaviour {
 	{
 		pressCount += 1;
 		DataCenter.instance.playerDataObject.PointCount += point;
-<<<<<<< HEAD
 		archiveText.enabled = false;
-=======
 		DataCenter.instance.playerDataObject.exp += point;
->>>>>>> Thonyatorn/master
 	}
 
 	public void wrongPress()
@@ -102,6 +99,6 @@ public class MissionControl2 : MonoBehaviour {
 
 	public void PressHome()
 	{
-		Application.LoadLevel (3);
+		Application.LoadLevel (1);
 	}
 }

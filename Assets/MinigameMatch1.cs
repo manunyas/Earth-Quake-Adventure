@@ -126,7 +126,7 @@ public class MinigameMatch1 : MonoBehaviour {
 
 	public void PressHome()
 	{
-		Application.LoadLevel (3);
+		Application.LoadLevel (1);
 	}
 
 }
