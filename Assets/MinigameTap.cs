@@ -98,8 +98,8 @@ public class MinigameTap : MonoBehaviour {
 	{
 		/*For reset Data File only
 		DataCenter.instance.playerDataObject.exp = 0;
-		DataCenter.instance.Save ();
-		*/
+		DataCenter.instance.Save ();*/
+
 		Application.LoadLevel (1);
 		DataCenter.instance.sceneDataObject.RunScene = true;
 	}

@@ -22,6 +22,7 @@ public class NextButton : MonoBehaviour {
 		//Reset PlayerData
 		DataCenter.instance.playerDataObject.currentStage = 0;
 		DataCenter.instance.playerDataObject.PointCount = 0;
+		DataCenter.instance.playerDataObject.PointCountFloat = 0;
 		DataCenter.instance.playerDataObject.CoinCount = 0;
 		DataCenter.instance.playerDataObject.specialCount = 0;
 		DataCenter.instance.playerDataObject.bonusPointCount = 0;
