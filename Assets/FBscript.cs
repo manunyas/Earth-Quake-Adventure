@@ -110,6 +110,35 @@ public class FBscript : MonoBehaviour {
 		FB.API ("/app/scores?fields=score,user.limit(30)", HttpMethod.GET, ScoresCallback);
 	}
 
+	//public void Logout()
+	//{
+	//	FB.LogOut();
+	//}
+
+	public void OnFacebookLogout()
+	{
+		if (FB.IsLoggedIn)
+		{                                                                                  
+			FB.LogOut (); 
+			StartCoroutine ("CheckForSuccussfulLogout");
+		} 
+	}
+
+	IEnumerator CheckForSuccussfulLogout()
+	{
+		if (FB.IsLoggedIn) 
+		{
+			yield return new WaitForSeconds (0.1f);
+			StartCoroutine ("CheckForSuccussfulLogout");
+		} else 
+		{
+			// Here you have successfully logged out.
+			// Do whatever you want as I do, I just enabled Login Button and Disabled
+			// logout button through this method.
+			// EnableFacebookLoginButton ();
+		}
+	}
+
 	private void ScoresCallback (IGraphResult result)
 	{
 		Debug.Log ("Scores callback: " + result.RawResult);
