@@ -11,6 +11,7 @@ public class StageValue : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GetComponent<Slider> ().maxValue = DataCenter.instance.playerDataObject.maxStage; //Reset PlayerData
 		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.currentStage;
 	}
 }

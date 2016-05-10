@@ -63,9 +63,6 @@ public class MinigameTap : MonoBehaviour {
 		if (playerValue > enermyValue && playerValue > DataCenter.instance.playerDataObject.maxStage) {
 			DataCenter.instance.playerDataObject.currentStage = 0;
 			QuestionCanvas.enabled = true; //Show question to answer
-			DataCenter.instance.playerDataObject.PointCountFloat = point;
-			DataCenter.instance.playerDataObject.bonusPointCount = bonusPoint;
-			DataCenter.instance.playerDataObject.n = 200; //Setting n to count number
 			Win = true; //for check
 		}
 	}
@@ -79,6 +76,10 @@ public class MinigameTap : MonoBehaviour {
 			RestageBtnCanvas.enabled = false;
 			NextBtnCanvas.enabled = true;
 			achivementText.enabled = true;
+
+			DataCenter.instance.playerDataObject.PointCountFloat = point;
+			DataCenter.instance.playerDataObject.bonusPointCount = bonusPoint;
+			DataCenter.instance.playerDataObject.n = 200; //Setting n to count number
 		}
 	}
 		
@@ -97,8 +98,8 @@ public class MinigameTap : MonoBehaviour {
 	{
 		/*For reset Data File only
 		DataCenter.instance.playerDataObject.exp = 0;
-		DataCenter.instance.Save ();
-		*/
+		DataCenter.instance.Save ();*/
+
 		Application.LoadLevel (1);
 		DataCenter.instance.sceneDataObject.RunScene = true;
 	}

@@ -7,7 +7,6 @@ public class PointsCount : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		p = DataCenter.instance.playerDataObject.PointCountFloat.ToString ("n0");
 		GetComponent<Text> ().text = p;
 	}
 	
