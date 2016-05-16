@@ -26,21 +26,8 @@ public class NextButton : MonoBehaviour {
 		DataCenter.instance.playerDataObject.CoinCount = 0;
 		DataCenter.instance.playerDataObject.specialCount = 0;
 		DataCenter.instance.playerDataObject.bonusPointCount = 0;
-		DataCenter.instance.playerDataObject.currentHP = DataCenter.instance.playerDataObject.maxHP;
 		DataCenter.instance.playerDataObject.maxStage = maxStage;
 		DataCenter.instance.playerDataObject.EndStage = false;
-
-		//===========Check maxHP by Level for setting PlayerData============
-		/*currentEXP = DataCenter.instance.playerDataObject.exp;
-		if (currentEXP < 600) {
-			DataCenter.instance.playerDataObject.maxHP = 70;
-		}else if (currentEXP < 1138) {
-			DataCenter.instance.playerDataObject.maxHP = 72;
-		}else if (currentEXP < 2157) {
-			DataCenter.instance.playerDataObject.maxHP = 74;
-		}else if (currentEXP < 4089) {
-			DataCenter.instance.playerDataObject.maxHP = 78;
-		}*/
 
 		scene1 = scene1.GetComponent<Canvas> ();
 		scene2 = scene2.GetComponent<Canvas> ();
