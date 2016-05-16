@@ -19,6 +19,7 @@ public class TimeBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GetComponent<Slider> ().maxValue = DataCenter.instance.playerDataObject.maxHP;
 		GetComponent<Slider> ().value = DataCenter.instance.playerDataObject.currentHP;
 		changeColor ();
 	}
