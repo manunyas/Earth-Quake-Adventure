@@ -66,9 +66,9 @@ public class NextButton : MonoBehaviour {
 
 	void Update()
 	{
+		DataCenter.instance.playerDataObject.currentHP = DataCenter.instance.playerDataObject.maxHP;
 		countNextBtn ();
 		showPreviousBtn ();
-		DataCenter.instance.playerDataObject.currentHP = DataCenter.instance.playerDataObject.maxHP;
 	}
 	
 	public void PressNextBtn()
